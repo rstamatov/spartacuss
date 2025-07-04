@@ -31,7 +31,9 @@ def merge_kymos(location):
                 filename = location + "/kymos_aligned/ch_" + str(channel) + "_track_1_" + str(particle) + "_" + axis + ".tif"
                 
                 if os.path.exists(filename):
-                    combined.append(imread(filename))
+                    img = imread(filename)
+                    img = np.flip(img, axis = 0)
+                    combined.append(img)
 
             
 
@@ -89,6 +91,7 @@ def plot_kymo_rgb(filename, ax, width, valid_frames, num_channels, color_order):
     
     image = imread(filename)
     plt.cla()
+
 
     hist = plt.hist(image[0, :, :].flatten(), 100)
     counts, values,_ = hist
