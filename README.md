@@ -1,4 +1,4 @@
-#Requirements
+# Requirements
 
 1.	Generate a maximum intensity projection of the tif image stack and save it. Then track the particles using MTrackJ and save the tracks in a .mdf file.
 
@@ -18,7 +18,7 @@ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 
 python get-pip.py
 
-#Usage 
+# Usage 
 
 This section explains the usage in general. Refer to the section “How to reproduce” below for a specific example.
 Please open a command window and start the script with the following arguments:
@@ -34,7 +34,7 @@ The above arguments are required. In addition, you can provide the following opt
 
 These are important for the correct scale of speed measurements. If not provided, they default to 1.
 
-#How to reproduce
+# How to reproduce
 
 In the provided example, there are 5 files:
 VLP example raw.tif – the raw image stack
@@ -48,7 +48,7 @@ A new folder named “results” will be generated and it will contain the outpu
 In case of only one channel, please provide the additional argument -num_channels 1
 This is important because the program assumes two channels by default.
 
-#Expected results
+# Expected results
 
 The output will be available in the folder designated by the -out argument. Inside, you will find the following results:
 
@@ -57,5 +57,5 @@ The output will be available in the folder designated by the -out argument. Insi
 3.	Kymos_aligned – this folder contains intermediate files - the individual kymographs per channel and per X, Y, Z axis, which are used in combined_plots/ above. These are tif files and so they can be opened in another software, e.g. Fiji, to do further processing (for example, adjusting brightness and contrast, cropping).
 4.	signals.xlsx – contains the intensity values of the particles over time, where each particle is a separate column.
 5.	Speeds.xlsx, speeds_z.xlsx, speeds_3d.xlsx – the actual values of the particle speeds used in the plots, where each particle is a separate column.
-6.	
+   
 The run time of the pipeline depends on the number of tracks and the size of the raw data. For the example provided, the processing takes around one minute on an average computer.
