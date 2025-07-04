@@ -26,11 +26,11 @@ python spartacuss.py -in "path/to/input/stack.tif" -out "results_folder" -max "p
 Important: enclose filenames in quotation marks, so they are interpreted as a single string in case they contain spaces.
 The above arguments are required. In addition, you can provide the following optional arguments:
 
--xy <pixel size in XY in microns per pixel>
+-xy < pixel size in XY in microns per pixel >
 
--z <pixel size in Z in microns per pixel>
+-z < pixel size in Z in microns per pixel >
 
--t <time interval between frames, in seconds>
+-t < time interval between frames, in seconds >
 
 These are important for the correct scale of speed measurements. If not provided, they default to 1.
 
